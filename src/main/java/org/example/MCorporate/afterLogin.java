@@ -67,9 +67,9 @@ public class afterLogin {
     public void AddUser() throws InterruptedException {
         driver.findElement(By.xpath("//button[text()='Add user']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.id("nameWallet")).sendKeys("Test-110");
-        driver.findElement(By.id("emailIDWallet")).sendKeys("testp110@yopmail.com");
-        driver.findElement(By.id("mobile_number")).sendKeys("9999905110");
+        driver.findElement(By.id("nameWallet")).sendKeys("Test-111");
+        driver.findElement(By.id("emailIDWallet")).sendKeys("testp111@yopmail.com");
+        driver.findElement(By.id("mobile_number")).sendKeys("9999905111");
         WebElement dropdownElement = driver.findElement(By.xpath("//select[@name='countries']"));
         Thread.sleep(3000);
         Select dropdown = new Select(dropdownElement);
@@ -77,7 +77,7 @@ public class afterLogin {
         driver.findElement(By.xpath("//button[text()='Submit']")).click();
         driver1 = new ChromeDriver();
         driver1.navigate().to("https://yopmail.com/");
-        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("testp110@yopmail.com");
+        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("testp111@yopmail.com");
         Thread.sleep(25000);
         driver1.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
         Thread.sleep(5000);
@@ -256,7 +256,7 @@ public class afterLogin {
         System.out.println("Is input element not editable? " + isNotEditable2);
         inputElement2.clear();
         Thread.sleep(3000);
-        inputElement2.sendKeys("Tripti");
+        inputElement2.sendKeys("Triptiiiiiiii");
         driver.findElement(By.xpath("(//div[contains(@class, 'pp-card-bottom')])[2]/button")).click();
         driver.findElement(By.xpath("(//div[contains(@class, 'pp-card-bottom')])[2]/button")).click();
     }

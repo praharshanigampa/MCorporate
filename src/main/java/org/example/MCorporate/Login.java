@@ -18,12 +18,12 @@ public class Login extends BaseTest {
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
-        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer26@yopmail.com");
+        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer27@yopmail.com");
         driver.findElement(By.xpath("//input[@id='termsConditions']")).click();
         driver.findElement(By.xpath("//button[text()='Continue']")).click();
         ChromeDriver driver1 = new ChromeDriver();
         driver1.navigate().to("https://yopmail.com/");
-        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("developer26@yopmail.com");
+        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("developer27@yopmail.com");
         Thread.sleep(25000);
         driver1.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
         Thread.sleep(5000);
@@ -135,7 +135,7 @@ public class Login extends BaseTest {
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
-        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer26@yopmail.com");
+        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer27@yopmail.com");
         driver.findElement(By.xpath("//input[@id='termsConditions']")).click();
         driver.findElement(By.xpath("//button[text()='Continue']")).click();
         String s=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
