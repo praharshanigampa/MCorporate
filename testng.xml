@@ -2,6 +2,31 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
+          name="/Users/praharshanigampa/Desktop/MyCorporate/src/main/java/org/example/MCorporate/Signup.java">
+        <classes>
+            <class name="org.example.MCorporate.Signup">
+                <methods>
+                    <include name="Signup"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/Users/praharshanigampa/Desktop/MyCorporate/src/main/java/org/example/MCorporate/Login.java">
+        <classes>
+            <class name="org.example.MCorporate.Login">
+                <methods>
+                    <include name="login"/>
+                    <include name="loginWithoutMailId"/>
+                    <include name="loginWithoutTandC"/>
+                    <include name="loginWithInvalidMailFormat"/>
+                    <include name="loginWithInvalidMailFormatAndNoTandC"/>
+                    <include name="loginWithNonRegisteredUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
           name="/Users/praharshanigampa/Desktop/MyCorporate/src/main/java/org/example/MCorporate/afterLogin.java">
         <classes>
             <class name="org.example.MCorporate.afterLogin">
@@ -24,21 +49,7 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true"
-          name="/Users/praharshanigampa/Desktop/MyCorporate/src/main/java/org/example/MCorporate/Login.java">
-        <classes>
-            <class name="org.example.MCorporate.Login">
-                <methods>
-                    <include name="login"/>
-                    <include name="loginWithoutMailId"/>
-                    <include name="loginWithoutTandC"/>
-                    <include name="loginWithInvalidMailFormat"/>
-                    <include name="loginWithInvalidMailFormatAndNoTandC"/>
-                    <include name="loginWithNonRegisteredUser"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+
     <test verbose="2" preserve-order="true"
           name="/Users/praharshanigampa/Desktop/MyCorporate/src/main/java/org/example/MCorporate/mainPage.java">
         <classes>
@@ -53,14 +64,5 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true"
-          name="/Users/praharshanigampa/Desktop/MyCorporate/src/main/java/org/example/MCorporate/Signup.java">
-        <classes>
-            <class name="org.example.MCorporate.Signup">
-                <methods>
-                    <include name="Signup"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+
 </suite>
