@@ -67,9 +67,9 @@ public class afterLogin {
     public void AddUser() throws InterruptedException {
         driver.findElement(By.xpath("//button[text()='Add user']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.id("nameWallet")).sendKeys("Test-111");
-        driver.findElement(By.id("emailIDWallet")).sendKeys("testp111@yopmail.com");
-        driver.findElement(By.id("mobile_number")).sendKeys("9999905111");
+        driver.findElement(By.id("nameWallet")).sendKeys("Test case 1");
+        driver.findElement(By.id("emailIDWallet")).sendKeys("testc1@yopmail.com");
+        driver.findElement(By.id("mobile_number")).sendKeys("9999905112");
         WebElement dropdownElement = driver.findElement(By.xpath("//select[@name='countries']"));
         Thread.sleep(3000);
         Select dropdown = new Select(dropdownElement);
@@ -77,7 +77,7 @@ public class afterLogin {
         driver.findElement(By.xpath("//button[text()='Submit']")).click();
         driver1 = new ChromeDriver();
         driver1.navigate().to("https://yopmail.com/");
-        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("testp111@yopmail.com");
+        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("testc1@yopmail.com");
         Thread.sleep(25000);
         driver1.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
         Thread.sleep(5000);

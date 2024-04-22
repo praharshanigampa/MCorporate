@@ -14,7 +14,6 @@ public class BaseTest {
     protected static WebDriver driver;
     protected static ChromeOptions options;
     protected static WebDriverWait wait;
-    @BeforeClass
     public void setup() throws InterruptedException
     {
 
