@@ -127,14 +127,6 @@ public class mainPage {
         Thread.sleep(3000);
         driver.quit();
     }
-    @AfterClass
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(10000);
-        driver.findElement(By.xpath("//div[@ID='navbarSupportedContent']/div/a")).click();
-        driver.findElement(By.xpath("//a[text()='Logout']")).click();
-        Thread.sleep(10000);
-        driver.quit();
-    }
 
 }
 
