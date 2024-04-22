@@ -92,20 +92,20 @@ public class mainPage {
     public void quickLinks() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[3]/ul/li[1]/a")).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.navigate().back();
         driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[3]/ul/li[2]/a")).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.navigate().back();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[3]/ul/li[3]/a")).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.navigate().back();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[3]/ul/li[4]/a")).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
     @Test(priority = 4)
     public void contactUs() throws InterruptedException {
