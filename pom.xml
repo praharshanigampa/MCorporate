@@ -122,7 +122,6 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
-                        <reportsDirectory>/Users/praharshanigampa/Desktop/MyCorporate/target/surefire-reports</reportsDirectory>
                     </configuration>
                 </plugin>
                 <plugin>

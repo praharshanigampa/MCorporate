@@ -103,17 +103,20 @@ import org.testng.annotations.Test;
 public class Login extends BaseTest {
     @Test
     public void login() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+       // WebDriver driver = new ChromeDriver();
+        options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        driver = new ChromeDriver(options);
         driver.navigate().to("https://mypursu.com/");
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
-        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer33@yopmail.com");
+        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer45@yopmail.com");
         driver.findElement(By.xpath("//input[@id='termsConditions']")).click();
         driver.findElement(By.xpath("//button[text()='Continue']")).click();
-        ChromeDriver driver1 = new ChromeDriver();
+        ChromeDriver driver1 = new ChromeDriver(options);
         driver1.navigate().to("https://yopmail.com/");
-        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("developer33@yopmail.com");
+        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("developer45@yopmail.com");
         Thread.sleep(25000);
         driver1.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
         Thread.sleep(5000);
@@ -153,8 +156,8 @@ public class Login extends BaseTest {
     @Test(priority = 0)
     public void loginWithoutMailId() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.navigate().to("https://dev.mypursu.com/");
+        driver = new ChromeDriver(options);
+        driver.navigate().to("https://mypursu.com/");
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
@@ -169,8 +172,10 @@ public class Login extends BaseTest {
     @Test(priority = 1)
     public void loginWithoutTandC() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.navigate().to("https://dev.mypursu.com/");
+        options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        driver = new ChromeDriver(options);
+        driver.navigate().to("https://mypursu.com/");
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
@@ -179,13 +184,12 @@ public class Login extends BaseTest {
         String actual_error = driver.findElement(By.xpath("//label[@id='termsConditions-error']")).getText();
         String expected_error = "Please accept terms and conditions";
         Assert.assertEquals(actual_error,expected_error);
-        driver.quit();
+        System.out.println(actual_error);
     }
     @Test(priority = 2)
     public void loginWithInvalidMailFormat() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.navigate().to("https://dev.mypursu.com/");
+        driver.navigate().to("https://mypursu.com/");
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
@@ -195,14 +199,13 @@ public class Login extends BaseTest {
         String actual_error = driver.findElement(By.xpath("//label[@id='emailID-error']")).getText();
         String expected_error = "Please enter valid email";
         Assert.assertEquals(actual_error,expected_error);
+        System.out.println(actual_error);
         Thread.sleep(2000);
-        driver.quit();
     }
     @Test(priority = 3)
     public void loginWithInvalidMailFormatAndNoTandC() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.navigate().to("https://dev.mypursu.com/");
+        driver.navigate().to("https://mypursu.com/");
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
@@ -214,18 +217,18 @@ public class Login extends BaseTest {
         String expected_error2="Please accept terms and conditions";
         Assert.assertEquals(actual_error1,expected_error1);
         Assert.assertEquals(actual_error2,expected_error2);
+        System.out.println(actual_error1);
+        System.out.println(actual_error2);
         Thread.sleep(2000);
-        driver.quit();
     }
     @Test(priority = 4)
     public void loginWithNonRegisteredUser() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.navigate().to("https://dev.mypursu.com/");
+        driver.navigate().to("https://mypursu.com/");
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
-        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer33@yopmail.com");
+        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer1000@yopmail.com");
         driver.findElement(By.xpath("//input[@id='termsConditions']")).click();
         driver.findElement(By.xpath("//button[text()='Continue']")).click();
         String s=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();

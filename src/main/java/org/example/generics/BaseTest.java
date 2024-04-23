@@ -19,7 +19,7 @@ public class BaseTest {
 
         //driver = new ChromeDriver();
         options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 20);

@@ -1,8 +1,10 @@
 package org.example.MCorporate;
 
 
+import org.example.generics.BaseTest;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,12 +15,14 @@ import org.testng.annotations.Test;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class mainPage {
+public class mainPage extends BaseTest {
     WebDriver driver;
     ChromeDriver driver1;
     @BeforeClass
     public void launchBrowser() throws InterruptedException {
-        driver = new ChromeDriver();
+        options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.navigate().to("https://mypursu.com/");
         Thread.sleep(3000);
@@ -40,19 +44,29 @@ public class mainPage {
         driver.manage().window().fullscreen();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[1]")).click();
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[2]")).click();
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[3]")).click();
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[4]")).click();
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[5]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         driver.switchTo().window(mainTabHandle);
-        Thread.sleep(3000);
+        driver.manage().window().fullscreen();
+        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[1]")).click();
+        Thread.sleep(4000);
+        driver.switchTo().window(mainTabHandle);
+        driver.manage().window().fullscreen();
+        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[2]")).click();
+        Thread.sleep(4000);
+        driver.switchTo().window(mainTabHandle);
+        driver.manage().window().fullscreen();
+        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[3]")).click();
+        Thread.sleep(4000);
+        driver.switchTo().window(mainTabHandle);
+        driver.manage().window().fullscreen();
+        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[4]")).click();
+        Thread.sleep(4000);
+        driver.switchTo().window(mainTabHandle);
+        driver.manage().window().fullscreen();
+        driver.findElement(By.xpath("(//div[@class='pp-footer-content'])[1]/div[2]/a[5]")).click();
+        Thread.sleep(4000);
+        driver.switchTo().window(mainTabHandle);
+        Thread.sleep(4000);
     }
     @Test(priority = 1)
     public void install() throws InterruptedException {

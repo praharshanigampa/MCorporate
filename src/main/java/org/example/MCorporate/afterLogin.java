@@ -1,8 +1,10 @@
 package org.example.MCorporate;
 
 
+import org.example.generics.BaseTest;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -13,12 +15,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 
-public class afterLogin {
+public class afterLogin extends BaseTest {
     WebDriver driver;
     ChromeDriver driver1;
     @BeforeClass
     public void setup() throws InterruptedException {
-        driver = new ChromeDriver();
+        options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         //driver.manage().window().fullscreen();
         driver.navigate().to("https://mypursu.com/");
@@ -28,7 +32,7 @@ public class afterLogin {
         driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("tripti@yopmail.com");
         driver.findElement(By.xpath("//input[@id='termsConditions']")).click();
         driver.findElement(By.xpath("//button[text()='Continue']")).click();
-        driver1 = new ChromeDriver();
+        driver1 = new ChromeDriver(options);
         driver1.navigate().to("https://yopmail.com/");
         driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("tripti@yopmail.com");
         Thread.sleep(25000);
@@ -67,17 +71,17 @@ public class afterLogin {
     public void AddUser() throws InterruptedException {
         driver.findElement(By.xpath("//button[text()='Add user']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.id("nameWallet")).sendKeys("Test case 5");
-        driver.findElement(By.id("emailIDWallet")).sendKeys("testc5@yopmail.com");
-        driver.findElement(By.id("mobile_number")).sendKeys("9999905116");
+        driver.findElement(By.id("nameWallet")).sendKeys("Test casee 4");
+        driver.findElement(By.id("emailIDWallet")).sendKeys("testcc4@yopmail.com");
+        driver.findElement(By.id("mobile_number")).sendKeys("9999905554");
         WebElement dropdownElement = driver.findElement(By.xpath("//select[@name='countries']"));
         Thread.sleep(3000);
         Select dropdown = new Select(dropdownElement);
         dropdown.selectByValue("226");
         driver.findElement(By.xpath("//button[text()='Submit']")).click();
-        driver1 = new ChromeDriver();
+        driver1 = new ChromeDriver(options);
         driver1.navigate().to("https://yopmail.com/");
-        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("testc5@yopmail.com");
+        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("testcc4@yopmail.com");
         Thread.sleep(25000);
         driver1.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
         Thread.sleep(5000);
