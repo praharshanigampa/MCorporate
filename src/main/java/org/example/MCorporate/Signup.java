@@ -30,11 +30,11 @@ public class Signup extends BaseTest {
         Thread.sleep(3000);
         driver.findElement(By.xpath("(//a[@class='text-decoration-none'])[2]")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//input[@id='name']")).sendKeys("developer45");
-        driver.findElement(By.xpath("//input[@id='companyName']")).sendKeys("developer45");
-        driver.findElement(By.xpath("//input[@id='email']")).sendKeys("developer45@yopmail.com");
-        driver.findElement(By.xpath("//input[@id='confirm_email']")).sendKeys("developer45@yopmail.com");
-        driver.findElement(By.xpath("//input[@id='mob_no']")).sendKeys("9999900045");
+        driver.findElement(By.xpath("//input[@id='name']")).sendKeys("developer47");
+        driver.findElement(By.xpath("//input[@id='companyName']")).sendKeys("developer47");
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys("developer47@yopmail.com");
+        driver.findElement(By.xpath("//input[@id='confirm_email']")).sendKeys("developer47@yopmail.com");
+        driver.findElement(By.xpath("//input[@id='mob_no']")).sendKeys("9999900047");
         driver.findElement(By.xpath("//input[@id='termsConditions']")).click();
         driver.findElement(By.xpath("//input[@id='privacyPolicy']")).click();
         driver.findElement(By.xpath("(//button[text()='Continue'])[1]")).click();
@@ -63,7 +63,7 @@ public class Signup extends BaseTest {
         driver.findElement(By.xpath("(//button[text()='Continue'])[2]")).click();
         ChromeDriver driver1 = new ChromeDriver(options);
         driver1.navigate().to("https://yopmail.com/");
-        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("developer45");
+        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("developer47");
         Thread.sleep(25000);
         driver1.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
         Thread.sleep(5000);
