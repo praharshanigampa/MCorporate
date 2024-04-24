@@ -37,8 +37,8 @@
             <class name="org.example.MCorporate.afterLogin">
                 <methods>
                     <include name="AddUser"/>
-                    <include name="formAddTotalAmountLoaded"/>
                     <include name="employeeformAddTotalAmountLoaded"/>
+                    <include name="formAddTotalAmountLoaded"/>
                     <include name="formAddWithdrow"/>
                     <include name="editUserDetail"/>
                     <include name="totalAmountLoadedCalculation"/>
