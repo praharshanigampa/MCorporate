@@ -111,12 +111,12 @@ public class Login extends BaseTest {
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[text()='Corporate Login']")).click();
-        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer49@yopmail.com");
+        driver.findElement(By.xpath("//input[@id='emailID']")).sendKeys("developer50@yopmail.com");
         driver.findElement(By.xpath("//input[@id='termsConditions']")).click();
         driver.findElement(By.xpath("//button[text()='Continue']")).click();
         ChromeDriver driver1 = new ChromeDriver(options);
         driver1.navigate().to("https://yopmail.com/");
-        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("developer49@yopmail.com");
+        driver1.findElement(By.xpath("//input[@placeholder='Enter your inbox here']")).sendKeys("developer50@yopmail.com");
         Thread.sleep(25000);
         driver1.findElement(By.xpath("//i[@class='material-icons-outlined f36']")).click();
         Thread.sleep(5000);
