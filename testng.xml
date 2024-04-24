@@ -16,6 +16,11 @@
         <classes>
             <class name="org.example.MCorporate.Login">
                 <methods>
+                    <include name="loginWithoutMailId"/>
+                    <include name="loginWithoutTandC"/>
+                    <include name="loginWithInvalidMailFormat"/>
+                    <include name="loginWithInvalidMailFormatAndNoTandC"/>
+                    <include name="loginWithNonRegisteredUser"/>
                     <include name="login"/>
                     <include name="loginWithoutMailId"/>
                     <include name="loginWithoutTandC"/>
@@ -36,9 +41,9 @@
                     <include name="employeeformAddTotalAmountLoaded"/>
                     <include name="formAddWithdrow"/>
                     <include name="editUserDetail"/>
-                    <include name="contactUs"/>
                     <include name="totalAmountLoadedCalculation"/>
                     <include name="search"/>
+                    <include name="contactUs"/>
                     <include name="basicInformation"/>
                     <include name="basicInformationDisabled"/>
                     <include name="addressDetails"/>
@@ -49,7 +54,6 @@
             </class>
         </classes>
     </test>
-
     <test verbose="2" preserve-order="true"
           name="/Users/praharshanigampa/Desktop/MyCorporate/src/main/java/org/example/MCorporate/mainPage.java">
         <classes>
@@ -64,5 +68,4 @@
             </class>
         </classes>
     </test>
-
 </suite>
